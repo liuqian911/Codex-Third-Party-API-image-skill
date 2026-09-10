@@ -1,0 +1,24 @@
+# Personal credentials and local configuration
+image-gen-env.txt
+**/image-gen-env.txt
+.env
+.env.*
+!.env.example
+
+# Local runtimes and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated output and local artifacts
+output/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.zip
+*.log
+.DS_Store
+Thumbs.db

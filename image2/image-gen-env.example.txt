@@ -1,0 +1,14 @@
+# 将本文件复制为同目录的 image-gen-env.txt，再填写下面的配置。
+# 修改后保存，下次调用 $image2 即生效；所有项目共用此配置。
+
+# 图像 API 地址，填写服务商提供的地址，例如 https://你的服务地址/v1
+base_url =
+
+# 填写你自己的 API Key；分享 Skill 时不要携带实际配置文件。
+api_key =
+
+# 使用的图像模型
+image-model = gpt-image-2
+
+# 图片保存目录：相对路径以当前工作目录为基准，也可填写绝对路径。
+out-path = output/imagegen

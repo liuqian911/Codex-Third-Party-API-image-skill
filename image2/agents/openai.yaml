@@ -1,0 +1,7 @@
+interface:
+  display_name: "Image2 Generator"
+  short_description: "Generate images with skill-configured GPT Image 2"
+  default_prompt: "Use $image2 to generate an image from my description."
+
+policy:
+  allow_implicit_invocation: false
