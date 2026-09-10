@@ -1,8 +1,17 @@
-# Codex-Third-Party-API-image2-skill
+# Codex Image2 Skill · 自定义 API 图像生成
 
-通过 `$image2` 显式调用的 Codex 生图 Skill。用户在 Skill 目录中配置自己的 API 地址、密钥、模型和图片保存目录，所有项目共用这份配置。
+Image2 是一个支持自定义 OpenAI 兼容图像 API 的 **Codex 生图 Skill**。通过 `$image2` 显式调用，将文字描述转换为图片；可接入第三方图像 API，并自行配置 API 地址、密钥、图像模型和输出目录。
 
-当前脚本支持文生图，默认每次生成一张 `1024x1024`、`high` 质量的图片。图片编辑、蒙版和批量请求尚未封装到本脚本中。虽然 `SKILL.md` 的描述包含编辑场景，但不能据此认为包装脚本支持编辑参数。
+Image2 is a **Codex image generation skill** for text-to-image workflows with custom OpenAI-compatible APIs. Invoke `$image2` explicitly to generate an image using your configured API endpoint, API key, image model, and output directory. It supports third-party image API providers that work with the bundled image generation CLI; model availability depends on your provider.
+
+- **显式调用 / Explicit invocation**：使用 `$image2` 启用，普通生图请求不会自动触发。
+- **自主配置 / Custom API configuration**：配置保存在 Skill 目录，所有项目共用；修改后下一次调用生效。
+- **输出管理 / Output management**：支持相对或绝对输出路径，同名图片自动使用版本化文件名。
+- **配置检查 / Dry-run validation**：使用 `--dry-run` 检查拟用配置和输出路径，不发送生图请求。
+
+当前 Python 包装脚本支持文生图，默认每次生成一张 `1024x1024`、`high` 质量的图片。模板模型为 `gpt-image-2`，可更换为端点和系统 CLI 支持的模型。图片编辑、蒙版和批量请求尚未封装到本脚本中。虽然 `SKILL.md` 的描述包含编辑场景，但不能据此认为包装脚本支持编辑参数。
+
+The current helper generates one image per run, with `1024x1024` size and `high` quality by default. Image editing, masks, and batch generation are not implemented in this helper. Python, the `openai` package, and Codex's system image generation CLI are required. Windows compatibility has not been fully validated; see the platform notes below.
 
 ## 安装
 
