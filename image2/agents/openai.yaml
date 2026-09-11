@@ -1,6 +1,6 @@
 interface:
   display_name: "Image2 Generator"
-  short_description: "Generate images with skill-configured GPT Image 2"
+  short_description: "Generate images with a skill-configured image API"
   default_prompt: "Use $image2 to generate an image from my description."
 
 policy:

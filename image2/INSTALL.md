@@ -27,7 +27,7 @@ Codex 通常会自动发现新增 Skill，下一轮对话可通过 `$image2` 显
 
 - `base_url`：服务商提供的图像 API 地址。
 - `api_key`：你自己的 API Key。
-- `image-model`：图像模型，模板默认 `gpt-image-2`。
+- `image-model`：图像模型，模板默认 `image2.5`。
 - `out-path`：输出目录。模板的 `output/imagegen` 相对于调用时的工作目录；绝对路径则始终保存到指定位置。
 
 保存后下次调用立即生效。所有项目共用 Skill 内的配置。分享此压缩包或 Skill 目录时，不要附带填写了密钥的实际配置文件。

@@ -9,7 +9,7 @@ Image2 is a **Codex image generation skill** for text-to-image workflows with cu
 - **输出管理 / Output management**：支持相对或绝对输出路径，同名图片自动使用版本化文件名。
 - **配置检查 / Dry-run validation**：使用 `--dry-run` 检查拟用配置和输出路径，不发送生图请求。
 
-当前 Python 包装脚本支持文生图，默认每次生成一张 `1024x1024`、`high` 质量的图片。模板模型为 `gpt-image-2`，可更换为端点和系统 CLI 支持的模型。图片编辑、蒙版和批量请求尚未封装到本脚本中。虽然 `SKILL.md` 的描述包含编辑场景，但不能据此认为包装脚本支持编辑参数。
+当前 Python 包装脚本支持文生图，默认每次生成一张 `1024x1024`、`high` 质量的图片。模板模型为 `image2.5`，可更换为端点和系统 CLI 支持的模型。图片编辑、蒙版和批量请求尚未封装到本脚本中。虽然 `SKILL.md` 的描述包含编辑场景，但不能据此认为包装脚本支持编辑参数。
 
 The current helper generates one image per run, with `1024x1024` size and `high` quality by default. Image editing, masks, and batch generation are not implemented in this helper. Python, the `openai` package, and Codex's system image generation CLI are required. Windows compatibility has not been fully validated; see the platform notes below.
 
@@ -18,12 +18,12 @@ The current helper generates one image per run, with `1024x1024` size and `high`
 可以把下面这段话发送给 Codex：
 
 ```text
-请从 https://github.com/liuqian911/Codex-Third-Party-API-image2-skill 仓库的 image2 目录安装 Image2 Skill。
+请从 https://github.com/liuqian911/Codex-Third-Party-API-image-skill 仓库的 image2 目录安装 Image2 Skill。
 保留已有的个人配置，如果已经安装，请先检查现状，不要直接覆盖。
 安装后检查 Python、openai 包和系统 imagegen 脚本，并告诉我如何填写配置。
 ```
 
-也可以从 [Releases](https://github.com/liuqian911/Codex-Third-Party-API-image2-skill/releases) 下载 `image2-skill.zip`，将其中的 `image2` 文件夹解压到个人 Skill 目录。默认执行路径为：
+也可以从 [Releases](https://github.com/liuqian911/Codex-Third-Party-API-image-skill/releases) 下载 `image2-skill.zip`，将其中的 `image2` 文件夹解压到个人 Skill 目录。默认执行路径为：
 
 ```text
 ~/.codex/skills/image2/SKILL.md
@@ -57,7 +57,7 @@ python3 -m venv "$image2_dir/.venv"
 ```text
 base_url = https://your-provider.example/v1
 api_key = REPLACE_WITH_YOUR_OWN_KEY
-image-model = gpt-image-2
+image-model = image2.5
 out-path = output/imagegen
 ```
 
