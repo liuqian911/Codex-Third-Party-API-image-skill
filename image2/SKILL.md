@@ -30,7 +30,7 @@ Preserve the user's subject and requested style. Add only details that materiall
 
 - `base_url`：图像 API 地址，例如 `https://你的服务地址/v1`。
 - `api_key`：用户自己的 API Key，仅保存在实际配置文件中。
-- `image-model`：使用的图像模型，模板默认 `image2.5`。
+- `image-model`：使用的图像模型，模板默认 `gpt-image-2.5-flare`。
 - `out-path`：图片保存目录。绝对路径始终指向指定目录；相对路径（如 `output/imagegen`）以运行脚本时的当前工作目录为基准。
 
 配置支持空行、以 `#` 开头的整行注释和带引号的值。缺少或留空任何必填字段时，脚本会在请求前报错。分享 Skill 时仅附上不含密钥的模板，排除实际的 `image-gen-env.txt`。

@@ -9,7 +9,7 @@ Image2 is a **Codex image generation skill** for text-to-image workflows with cu
 - **输出管理 / Output management**：支持相对或绝对输出路径，同名图片自动使用版本化文件名。
 - **配置检查 / Dry-run validation**：使用 `--dry-run` 检查拟用配置和输出路径，不发送生图请求。
 
-当前 Python 包装脚本支持文生图，默认每次生成一张 `1024x1024`、`high` 质量的图片。模板模型为 `image2.5`，可更换为端点和系统 CLI 支持的模型。图片编辑、蒙版和批量请求尚未封装到本脚本中。虽然 `SKILL.md` 的描述包含编辑场景，但不能据此认为包装脚本支持编辑参数。
+当前 Python 包装脚本支持文生图，默认每次生成一张 `1024x1024`、`high` 质量的图片。模板模型为 `gpt-image-2.5-flare`，可更换为端点和系统 CLI 支持的模型。图片编辑、蒙版和批量请求尚未封装到本脚本中。虽然 `SKILL.md` 的描述包含编辑场景，但不能据此认为包装脚本支持编辑参数。
 
 The current helper generates one image per run, with `1024x1024` size and `high` quality by default. Image editing, masks, and batch generation are not implemented in this helper. Python, the `openai` package, and Codex's system image generation CLI are required. Windows compatibility has not been fully validated; see the platform notes below.
 
@@ -57,7 +57,7 @@ python3 -m venv "$image2_dir/.venv"
 ```text
 base_url = https://your-provider.example/v1
 api_key = REPLACE_WITH_YOUR_OWN_KEY
-image-model = image2.5
+image-model = gpt-image-2.5-flare
 out-path = output/imagegen
 ```
 

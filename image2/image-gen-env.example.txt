@@ -8,7 +8,7 @@ base_url =
 api_key =
 
 # 使用的图像模型
-image-model = image2.5
+image-model = gpt-image-2.5-flare
 
 # 图片保存目录：相对路径以当前工作目录为基准，也可填写绝对路径。
 out-path = output/imagegen
